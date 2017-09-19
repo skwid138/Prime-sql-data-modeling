@@ -18,3 +18,16 @@ CREATE TABLE departments_to_staff(
 	staff_id int REFERENCES staff (staff_id),
 	department_id int REFERENCES departments (department_id)
 );
+
+INSERT INTO departments (name) VALUES ('Instruction');
+INSERT INTO departments (name) VALUES ('Admin');
+INSERT INTO departments (name) VALUES ('Culinary');
+
+INSERT INTO staff (first_name, last_name) VALUES ('Millie', 'Walsh');
+INSERT INTO staff (first_name, last_name) VALUES ('Fred', 'Sheahan');
+
+INSERT INTO lectures (title, topic, staff_id) VALUES ('Inventory', 'SQL', 1);
+INSERT INTO lectures (title, topic, staff_id) VALUES ('NVC', 'None Viloent Comm', 2);
+
+INSERT INTO departments_to_staff (staff_id, department_id) VALUES (1, 1);
+INSERT INTO departments_to_staff (staff_id, department_id) VALUES (2, 2);
